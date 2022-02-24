@@ -142,7 +142,7 @@ Add-AppProvisionedPackage -Online -PackagePath $LIPContent\LanguageExperiencePac
 
 $WindowsPackages=get-childitem $LanguagePath -Filter *.cab 
 Foreach ($Package in $WindowsPackages) {
-Add-WindowsPackage -Online -PackagePath $Package.fullname -ErrorAction SilentlyContinue -Verbose
+Add-WindowsPackage -Online -PackagePath $Package.fullname -ErrorAction Ignore -Verbose
 }
 
 $LanguageList = Get-WinUserLanguageList
@@ -169,12 +169,12 @@ foreach ($Appx in $AllAppx) {
     
     Write-Host "Handeling with xml $appname"  
   
-    Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -LicensePath $TempPathxml -ErrorAction SilentlyContinue -Verbose
+    Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -LicensePath $TempPathxml -ErrorAction Ignore -Verbose
     } else {
       
       Write-Host "Handeling without xml $appname"
       
-      Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -skiplicense -ErrorAction SilentlyContinue -Verbose
+      Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -skiplicense -ErrorAction Ignore -Verbose
     }
 }
 foreach ($Appx in $AllAppxBundles) {
@@ -186,10 +186,10 @@ foreach ($Appx in $AllAppxBundles) {
     if($allAppxXML.name.Contains($appnamexml)){
     Write-Host "Handeling with xml $appname"
     
-    Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -LicensePath $TempPathxml -ErrorAction SilentlyContinue -Verbose
+    Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -LicensePath $TempPathxml -ErrorAction Ignore -Verbose
     } else {
        Write-Host "Handeling without xml $appname"
-      Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -skiplicense -ErrorAction SilentlyContinue -Verbose
+      Add-AppxProvisionedPackage -Online -PackagePath $TempPathappx -skiplicense -ErrorAction Ignore -Verbose
     }
 }
 write-host "Finished update of Inbox apps"
