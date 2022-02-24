@@ -12,7 +12,7 @@ $LogPath="C:\Programdata\PPC\"
 $Logfile="Software_Install.log"
 #repo for app installation parameters
 $repo="https://dev.azure.com/ProactBenelux/d4523fbb-bde0-48ff-9be6-e3fb84165b1a/_apis/git/repositories/92abb40d-73cf-49ef-9a5c-cbed18018b12/items?path="
-$storageaccount="https://avbstorage001.blob.core.windows.net/avdbuild?sp=rl&st=2022-02-23T14:55:06Z&se=2022-02-23T22:55:06Z&spr=https&sv=2020-08-04&sr=c&sig=%2BV185lyskqBFZS2NjDIVyLiS8m4mtgmIXygWFDFE3ww%3D"
+$storageaccount="https://ppcavdstorage.blob.core.windows.net/avdbuild?sp=r&st=2022-02-24T08:31:07Z&se=2023-02-24T16:31:07Z&spr=https&sv=2020-08-04&sr=c&sig=8NGsByN%2BkHPpTsFIZvRubQ%2FqfN1c1Hig7pDAyqXmZfo%3D"
 
 #Module to install
 $Modules=@()
