@@ -3,7 +3,7 @@ Start-Sleep -Seconds 5
 
 #Start OSDCloud ZTI the RIGHT way
 Write-Host  -ForegroundColor Cyan "Start OSDCloud with Amstelveen Parameters"
-Start-OSDCloud -OSName 'Windows 10 21H2 x64'-OSLanguage nl-nl -OSEdition Pro -ZTI -Restart
+Start-OSDCloud -findimage -ZTI -Restart
 
 #Restart from WinPE
 Write-Host  -ForegroundColor Cyan "Restarting in 20 seconds!"
